@@ -13,14 +13,14 @@ class Wisata extends Model
     protected $table = 'wisata';
 
     protected $fillable = [
-        'nama', 
-        'deskripsi', 
-        'gambar', 
-        'kategori_id', 
-        'harga_tiket_masuk', 
-        'jam_buka', 
-        'jam_tutup', 
-        'longitude', 
+        'nama',
+        'deskripsi',
+        'gambar',
+        'kategori_id',
+        'harga_tiket_masuk',
+        'jam_buka',
+        'jam_tutup',
+        'longitude',
         'latitude'
     ];
 
@@ -44,8 +44,7 @@ class Wisata extends Model
     }
 
     public function comments()
-{
-    return $this->hasMany(Comment::class);
-}
-
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

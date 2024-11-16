@@ -125,7 +125,7 @@ class HomepageController extends Controller
 
     public function allWisata()
     {
-        $wisata = Wisata::all();
+        $wisata = Wisata::withCount('comments')->get();
         $kategori = Kategori::all();
         return view('semua_wisata', compact('wisata', 'kategori'));
     }
